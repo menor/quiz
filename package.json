@@ -1,0 +1,20 @@
+{
+  "name": "Quiz",
+  "version": "0.0.0",
+  "description": "Simple quiz program to put my Javascript skills to the test. Built for the Javascript is Sexy course.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quiz",
+    "javascript"
+  ],
+  "author": "Jose Menor",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0"
+  }
+}
