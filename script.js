@@ -1,3 +1,4 @@
+'use strict';
 // Prepare what goes into the element
 //  - Choose the first quiz
 //  - Retrieve the question and assign it to a variable
@@ -12,9 +13,6 @@
 //    - If it is show the score
 //    - If not inject the next quiz into the html 
 
-
-'use strict';
-
 var allQuestions = [
     {
         question: 'Shangri-La is a song by: ',
@@ -28,23 +26,23 @@ var allQuestions = [
     }
 ];
 
-
-var i = 0;
-var currentQuestion = allQuestions[i];
-var question = currentQuestion.question;
-var choices = currentQuestion.choices;
-var hFieldset = document.getElementById('fieldset');
-
 function generateForm () {
 
+    var i = 0;
+    var currentQuestion = allQuestions[i];
+    var question = currentQuestion.question;
+    var choices = currentQuestion.choices;
+    var myFieldset = document.getElementById('myFieldset');
     var myFragment = document.createDocumentFragment();
     var hLegend = document.createElement('legend');
+    
     hLegend.textContent = question;
     myFragment += hLegend;
+    myFieldset.appendChild(hLegend);
 
-    for (var i=0, len=choices.length ; i<=len ; i+=1) {
+    for (var j=0, len=choices.length ; j<len ; j+=1) {
     
-        var currentChoice = choices[i];
+        var currentChoice = choices[j];
 
         var element = document.createElement('input');
         //Assign different attributes to the element.
@@ -54,15 +52,16 @@ function generateForm () {
 
         //Then the label
         var newLabel = document.createElement('label');
-        newLabel.innerHTML = currentChoice;
+        newLabel.appendChild(document.createTextNode(currentChoice));
     
-        myFragment = myFragment + element + newLabel;
-    }
+        myFieldset.appendChild(element);
+        myFieldset.appendChild(newLabel);
 
-    return myFragment;
+    }
+    
+    
 }
 
-console.log(hFieldset);
-var myCode = generateForm();
-hFieldset.appendChild(myCode);
+generateForm();
+
 
