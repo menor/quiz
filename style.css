@@ -1,0 +1,43 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+legend {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+label {
+    padding-left: .5em;
+    font-size: 1.1em;
+}
+
+fieldset {
+    width: 70%;
+    margin-top: 40px;
+}
+
+input[type="radio"] {
+    float: left;
+    margin-left: 20px;
+}
+
+input[type="submit"] {
+    float: right;
+    color: #FFF;
+    background-color: #428bca;
+    border-color: #357ebd;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    font-size: 1.5em;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
