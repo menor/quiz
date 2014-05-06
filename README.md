@@ -1,4 +1,4 @@
 quiz
 ====
 
-Project for learning Javascript, following the Javascript is sexy itinerary. 
+Project to learning Javascript, following the Javascript is sexy itinerary. 
